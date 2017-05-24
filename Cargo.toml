@@ -1,0 +1,9 @@
+[package]
+name = "playground"
+version = "0.1.0"
+authors = ["Christoph <christoph@intanet.de>"]
+
+[dependencies]
+
+[profile.release]
+lto = true
