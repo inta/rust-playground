@@ -14,8 +14,10 @@ while [ "$1" != '' ]; do
 	if [ "$prefix" = "--target" ]; then
 		path="target/$target/release"
 		params="$params $prefix=$target"
-		shift
+	else
+		params="$params $1"
 	fi
+	shift
 done
 
 if ! grep -q "lto = true" Cargo.toml; then
